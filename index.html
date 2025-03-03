@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chhotu Kumar - Data Science Portfolio</title>
+    <style>
+        body { font-family: 'Courier New', monospace; text-align: center; background-color: #121212; color: white; }
+        h1 { color: #4CAF50; }
+        .container { max-width: 800px; margin: auto; padding: 20px; }
+        .notepad { background: #1e1e1e; color: white; padding: 10px; border-radius: 5px; text-align: left; margin-top: 20px; }
+        textarea { width: 100%; height: 150px; background: black; color: lime; border: none; padding: 10px; }
+        button { padding: 10px 15px; background: #4CAF50; color: white; border: none; cursor: pointer; margin-top: 10px; }
+        nav a { margin: 10px; color: #4CAF50; text-decoration: none; font-size: 18px; }
+        .dark-mode { background-color: #000; color: #fff; }
+        input, textarea { width: 100%; margin-top: 5px; }
+    </style>
+</head>
+<body>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+        <button onclick="toggleDarkMode()">Toggle Dark Mode</button>
+    </nav>
+    
+    <div class="container">
+        <h1>Chhotu Kumar</h1>
+        <p>Data Science Student at IIT Madras</p>
+    </br>
+        <h2>About IIT Madras BS Data Science</h2>
+        <p>The IIT Madras BS Degree in Data Science and Applications is a unique online program designed to provide students with a strong foundation in programming, statistics, machine learning, and data-driven decision-making. It is India's first online degree offered by an IIT and is structured to be flexible, allowing students from diverse backgrounds to enroll.</p>
+        <h3>Key Features:</h3>
+        <ul>
+            <li><strong>Flexible Learning:</strong> Study at your own pace with multiple exit options (Certificate, Diploma, or BS Degree).</li>
+            <li><strong>Industry-Relevant Curriculum:</strong> Covers Python, SQL, Machine Learning, AI, and Big Data Analytics.</li>
+            <li><strong>Open to All:</strong> No prior coding experience required; anyone with an interest in data science can apply.</li>
+            <li><strong>High-Quality Faculty:</strong> Learn from IIT Madras professors and industry experts.</li>
+            <li><strong>Career Support:</strong> Internship and placement assistance with top tech companies.</li>
+        </ul>
+        <p>Data Science Student at IIT Madras</p>
+    </div>
+    
+    <div class="container">
+    </br>
+        <h2> Notepad</h2>
+        <p>Use this notepad to write and save your notes. You can:</p>
+        <ul>
+            <li>Type and edit your notes.</li>
+            <li>Save notes for later use.</li>
+            <li>Clear notes when no longer needed.</li>
+            <li>Listen to your notes using text-to-speech.</li>
+        </ul>
+        <div class="notepad">
+            <textarea id="notepad" placeholder="Write your notes here..."></textarea>
+            <button onclick="saveNote()">Save Note</button>
+            <button onclick="clearNote()">Clear</button>
+            <button onclick="listenNote()">Listen</button>
+        </div>
+    </div>
+    
+    <script>
+        function toggleDarkMode() {
+            document.body.classList.toggle("dark-mode");
+        }
+        
+        function saveNote() {
+            let noteContent = document.getElementById("notepad").value;
+            if (noteContent.trim() !== "") {
+                localStorage.setItem("notepadContent", noteContent);
+            }
+        }
+        
+        function clearNote() {
+            document.getElementById("notepad").value = "";
+            localStorage.removeItem("notepadContent");
+        }
+        
+        function listenNote() {
+            let text = document.getElementById("notepad").value.trim();
+            if (text !== "") {
+                let speech = new SpeechSynthesisUtterance(text);
+                window.speechSynthesis.speak(speech);
+            }
+        }
+        
+        window.onload = function() {
+            let savedNote = localStorage.getItem("notepadContent");
+            if (savedNote) {
+                document.getElementById("notepad").value = savedNote;
+            }
+        };
+    </script>
+</body>
+</html>
