@@ -18,6 +18,15 @@
         nav a { margin: 10px; color: #4CAF50; text-decoration: none; font-size: 18px; }
         .dark-mode { background-color: #000; color: #fff; }
         input, textarea { width: 95%; margin-top: 5px; }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        
+        @keyframes slideIn {
+            from { transform: translateY(-20px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
     </style>
 </head>
 <body>
