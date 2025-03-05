@@ -40,12 +40,12 @@
     
     <div class="container">
         <h1>Chhotu Kumar</h1>
-        <p1>Data Science Student at IIT Madras</p1>
+        <p1>Login with your iitm bs data Science student id</p1>
     </div>
     
     <div class="login-container">
         <h2>Login / Sign Up</h2>
-        <input type="email" id="email" placeholder="Enter your email" required>
+        <input type="email" id="email" placeholder="Enter your student email" required>
         <input type="password" id="password" placeholder="Enter your password" required>
         <button onclick="login()">Login</button>
         <button onclick="signup()">Sign Up</button>
@@ -65,7 +65,7 @@
         }
         
         function login() {
-            let systemMessage = "Your system is not capable to load our program. Please change your system and then come back.";
+            let systemMessage = "Please, login with your iitm bs student id. It is restricted, no one else can access";
             let email = document.getElementById("email").value;
             let password = document.getElementById("password").value;
             let storedEmail = localStorage.getItem("userEmail");
