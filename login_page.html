@@ -3,94 +3,293 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Chhotu Kumar- login_page</title>
+    <title>Chhotu Kumar | Login_Page</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
-        body { font-family: cursive; text-align: center; background-color: #121212; color: white; transition: background 0.3s, color 0.3s; }
-        h1 { color: #4CAF50; animation: fadeIn 2s ease-in-out; }
-        .container { max-width: 800px; margin: auto; padding: 20px; animation: slideIn 1.5s ease-in-out; }
-        .login-container { max-width: 400px; margin: auto; padding: 20px; background: #1e1e1e; border-radius: 10px; animation: fadeIn 2s ease-in-out; }
-        input { width: 95%; padding: 10px; margin: 10px 0; border-radius: 0.5px; border: none; color:#000; }
-        button { padding: 10px 15px; background: #4CAF50; color: white; border: none; cursor: pointer; margin-top: 10px; transition: transform 0.2s; }
-        button:hover { transform: scale(1.1); }
-        nav a { margin: 10px; color: #4CAF50; text-decoration: none; font-size: 18px; }
-        nav a:hover { color:#ffffff; }
-        a { margin: 10px; color: #4CAF50; text-decoration: none; font-size: 16px; margin-top:10px }
-        a:hover { color:#ffffff; }
-        .dark-mode { background-color: #000; color: #fff; }
-        .light-mode { background-color: #fff; color: #ffa500; nav a:hover {color:#000;}; .container {color:#000;}}
-        footer {position:relative; margin-top: 30px; padding: 10px; background: #333; color: white; font-size: 14px; text-align: center;}
-        .dark-mode footer {background: #111;}
-        
-        @keyframes fadeIn {
-            from { opacity: 0; }
-            to { opacity: 1; }
+        nav {
+            text-align: center; 
+            padding-top: 15px;
+            padding-bottom: 12px;
+            
+            text-shadow: 0 0 3px #2dffc4;
+            font-size: 0.9rem; 
+            letter-spacing: 2px; 
         }
-        
-        @keyframes slideIn {
-            from { transform: translateY(-20px); opacity: 0; }
-            to { transform: translateY(0); opacity: 1; }
+        nav a {
+            margin: 10px; color: #2dffc4;
+         }
+        nav a:hover {
+             color:white;
+         }
+        header {
+            text-align: center;
         }
+        a {
+            margin: 10px; 
+            color: #2dffc4;
+            text-shadow: 0 0 3px #2dffc4;
+        }
+        a:hover {
+             color:white;
+         }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', sans-serif;
+            width: 100%;
+        }
+
+        body {
+            
+            background: #0a0a0a;
+            width: 100%;
+            
+            
+            justify-content: center;
+            align-items: center;
+            
+        }
+        h1 {
+            margin-top: 20px;
+            color: #2dffc4;
+            font-family: 'Orbitron', sans-serif;
+            text-shadow: 0 0 7px #2dffc4;
+        }
+        p {
+            color:white;
+            margin-top: 10px;
+            font-family: sans-serif;
+        }
+
+        .cyber-container {
+            position: relative;
+            margin: auto;
+            width: 500px;
+            margin-top: 30px;
+            background: rgba(0, 0, 0, 0.75);
+            border-radius: 10px;
+            padding: 30px;
+            
+            
+           
+            
+            border: 2px solid rgba(45, 255, 196, 0.2);
+            box-shadow: 0 0 50px rgba(45, 255, 196, 0.1);
+        }
+
+        .cyber-title {
+            color: #2dffc4;
+            font-size: 2.5em;
+            text-transform: uppercase;
+            letter-spacing: 4px;
+            text-shadow: 0 0 5px #2dffc4;
+            margin-bottom: 20px;
+        }
+
+        .input-box {
+            position: relative;
+            width: 100%;
+            margin: 30px 0;
+        }
+
+        .input-box input {
+            width: 100%;
+            padding: 15px;
+            border: none;
+            border-radius: 0px;
+            background: rgba(255, 255, 255, 0.1);
+            color: #fff;
+            font-size: 1em;
+            outline: none;
+            transition: 0.5s;
+            text-align: left;
+        }
+
+        .input-box label {
+            position: absolute;
+            left: 15px;
+            top: 50%;
+            transform: translateY(-7%);
+            color: rgba(255, 255, 255, 0.5);
+            pointer-events: none;
+            transition: 0.5s;
+        }
+
+        .input-box input:focus ~ label,
+        .input-box input:valid ~ label {
+            top: -10px;
+            left: 10px;
+            font-size: 0.8em;
+            color: #2dffc4;
+        }
+
+        .input-box input:focus,
+        .input-box input:valid {
+            border: 1px solid #2dffc4;
+            box-shadow: 0 0 3px #2dffc4;
+        }
+
+        button {
+            width: 100%;
+            padding: 15px;
+            background: linear-gradient(45deg, #2dffc4, #0a0a0a);
+            border: none;
+            border-radius: 0px;
+            color: #0a0a0a;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            cursor: pointer;
+            transition: 2s;
+            position: relative;
+            overflow: hidden;
+        }
+
+        button:hover {
+            background: linear-gradient(45deg, #0a0a0a, #2dffc4);
+            color: #2dffc4;
+            box-shadow: 0 0 5px #2dffc4;
+        }
+
+        .particles {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+        }
+
+        .footer-text {
+            color:white;
+            font-size: 1em;
+            padding-top: 20px;
+            
+            
+            text-align: center;
+        }
+        footer{
+            background-color: aqua;
+            text-align: center;
+            width: 100%;
+            height: 20vh;
+            margin-top: 50px;
+        }
+        @media (max-width: 600px){
+            .cyber-container{
+                margin: 30px;
+                width: auto;
+            
+            }
+        }
+
     </style>
 </head>
 <body>
     <nav>
-        <a href="index.html">Home</a>
-        <a href="about_me.html">About_Me</a>
+        <a href="https://kundanhzb.github.io/portfolio/about_me.html">Home</a>
         <a href="https://pypod.github.io/">Learn_Python</a>
-        <button onclick="toggleMode()">Switch Mode</button>
+        <a href="login_page.html">login</a>
+        
     </nav>
+    <header>
+        <h1>
+            Chhotu Kumar
+        </h1>
+        <p>
+            Data Science and Programing |Artificial Intelligence |Machine Learning |Student at IIT Madras |Aspiring Innovator
+        </p>
+        <a onclick="get()">Get_id&key</a>
+    </header>
+    <div class="particles" id="particles"></div>
     
-    <div class="container">
-        <h1>Chhotu Kumar</h1>
-        <p1>Login with your iitm bs data Science student id</p1>
-    </div>
-    
-    <div class="login-container">
-        <h2>Login / Sign Up</h2>
-        <input type="email" id="email" placeholder="Enter your student email" required>
-        <input type="password" id="password" placeholder="Enter your password" required>
-        <button onclick="login()">Login</button>
-        <button onclick="signup()">Sign Up</button>
-        <p id="message"></p>
+    <div class="cyber-container">
+        <h1 class="cyber-title">Secure Access</h1>
+        
+        <div class="input-box">
+            <input type="text" required>
+            <label><i class="fas fa-user"></i> Enter Your ID</label>
+        </div>
+
+        <div class="input-box">
+            <input type="password" required>
+            <label><i class="fas fa-lock"></i> Enter Your Key</label>
+        </div>
+
+        <button onclick="hello()">Authenticate</button>
+        
+        
     </div>
     <footer>
-        &copy; 2025 Chhotu Kumar. All Rights Reserved.
+        <p class="footer-text" id="footer-text">IITM BS Degree v3.14 © 2025 Chhotu Kumar</p>
     </footer>
-    
+
     <script>
-        function toggleMode() {
-            let body = document.body;
-            if (body.classList.contains("dark-mode")) {
-                body.classList.remove("dark-mode");
-                body.classList.add("light-mode");
-            } else {
-                body.classList.remove("light-mode");
-                body.classList.add("dark-mode");
+        function get(){  
+            alert("You can get id & key by contacting the authority");  
+            } 
+        function hello(){  
+            alert("Access Failed| check your id & key| if you don't have id & key get it first");  
+            } 
+        // Particle animation
+        const canvas = document.createElement('canvas');
+        const ctx = canvas.getContext('2d');
+        document.getElementById('particles').appendChild(canvas);
+
+        canvas.width = window.innerWidth;
+        canvas.height = window.innerHeight;
+
+        const particles = [];
+        class Particle {
+            constructor() {
+                this.x = Math.random() * canvas.width;
+                this.y = Math.random() * canvas.height;
+                this.size = Math.random() * 2;
+                this.speedX = Math.random() * 3 - 1.5;
+                this.speedY = Math.random() * 3 - 1.5;
+            }
+
+            update() {
+                this.x += this.speedX;
+                this.y += this.speedY;
+
+                if (this.x > canvas.width) this.x = 0;
+                if (this.x < 0) this.x = canvas.width;
+                if (this.y > canvas.height) this.y = 0;
+                if (this.y < 0) this.y = canvas.height;
+            }
+
+            draw() {
+                ctx.fillStyle = '#2dffc4';
+                ctx.beginPath();
+                ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
+                ctx.fill();
             }
         }
-        
-        function login() {
-            let systemMessage = "Please, login with your iitm bs student id. It is restricted, no one else can access";
-            let email = document.getElementById("email").value;
-            let password = document.getElementById("password").value;
-            let storedEmail = localStorage.getItem("userEmail");
-            let storedPassword = localStorage.getItem("userPassword");
-            
-            if (email === storedEmail && password === storedPassword) {
-                alert(systemMessage);
-                document.getElementById("message").innerText = "Login failed!";
-            } else {
-                document.getElementById("message").innerText = "Invalid email or password.";
+
+        function init() {
+            for (let i = 0; i < 100; i++) {
+                particles.push(new Particle());
             }
         }
-        
-        function signup() {
-            let email = document.getElementById("email").value;
-            let password = document.getElementById("password").value;
-            localStorage.setItem("userEmail", email);
-            localStorage.setItem("userPassword", password);
-            document.getElementById("message").innerText = "Sign up successful! Please log in.";
+
+        function animate() {
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+            for (let particle of particles) {
+                particle.update();
+                particle.draw();
+            }
+            requestAnimationFrame(animate);
         }
+
+        init();
+        animate();
+
+        window.addEventListener('resize', () => {
+            canvas.width = window.innerWidth;
+            canvas.height = window.innerHeight;
+            init();
+        });
     </script>
 </body>
 </html>
