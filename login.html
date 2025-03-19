@@ -77,13 +77,6 @@
             
         }
         /* h */
-    
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
         body {
             background: linear-gradient(45deg, var(--dark-bg) 0%, #1a1a2f 100%);
             color: #fff;
@@ -105,24 +98,19 @@
             font-family: 'Segoe UI', sans-serif;
             width: 100%;
         }
-        h1 {
-            font-family: sans-serif;
-            font-size: 3.5rem;
-            margin-bottom: 1rem;
-            color: #07c0ef;
-            text-shadow: 0 0 15px #07c0ef;
-            
-        }
      .cyber-container {
             position: relative;
             margin: auto;
             width: 500px;
             margin-top: 30px;
             background: rgba(0, 0, 0, 0.75);
-            border-radius: 10px;
-            padding: 50px;
+            border-radius: 0px;
+            padding: 70px;
             border: 1px solid #07c0ef;
-            box-shadow: 0 0 10px #07c0ef;
+           
+        }
+        .cyber-container:hover {
+            box-shadow: 0 0 7px #07c0ef;
         }
 
         .cyber-title {
@@ -216,13 +204,13 @@
         }
      @media (max-width: 600px){
             .cyber-container{
-                margin: 30px;
+                margin: 10px;
                 width: auto;
                 margin-top: 100px;
-            
-            }
-            h1 {
-                margin-top: 30px;
+                padding: 30px;
+                border-radius: 0px;
+                border: 1px solid #07c0ef;
+                box-shadow: 0 0 7px #07c0ef;
             }
             p {
                 margin-top: 30px;
@@ -232,9 +220,6 @@
             
             footer {
                 margin-top: 200px;
-            }
-            .cyber-container {
-                padding: 30px;
             }
              #particles {
                 display: none;
