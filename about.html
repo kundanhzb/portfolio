@@ -90,7 +90,7 @@
         }
 
         h1 {
-            font-family: 'Orbitron', sans-serif;
+            font-family: sans-serif;
             font-size: 3.5rem;
             margin-bottom: 1rem;
             color: #07c0ef;
@@ -171,25 +171,9 @@
               
             }
 
-            .holographic-line {
-                height: 2px;
-                width: 50%;
-                margin: 1rem auto;
-                background: linear-gradient(90deg, 
-                    transparent, 
-                    var(--neon-blue),
-                    var(--neon-purple),
-                    transparent);
-                animation: hologramFlow 2s infinite linear;
-            }
-
-            .neon-text {
-                font-family: 'Orbitron', sans-serif;
+            .text {
+                font-family: sans-serif;
                 color: black;
-                
-                font-size: 0.7rem;
-                letter-spacing: 1.5px;
-                
             }
 
             @keyframes hologramFlow {
@@ -304,8 +288,7 @@
     <!--closing-->
 <footer class="futuristic-footer">
     <div class="footer-content">
-        <p class="neon-text">&copy; <span id="year"></span> Chhotu Kumar. All Rights Reserved.</p>
-        <div class="holographic-line"></div>
+        <p class="text">&copy; <span id="year"></span> Chhotu Kumar. All Rights Reserved.</p>
     </div>
 </footer>
 
