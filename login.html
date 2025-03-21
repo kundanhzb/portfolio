@@ -25,7 +25,7 @@
              color:white;
          }
 
-         a {
+        a {
             text-align: center; 
             padding-top: 15px;
             padding-bottom: 12px;
@@ -35,13 +35,14 @@
             font-size: 0.9rem; 
             letter-spacing: 2px;
             }
-         a {
+        a {
             margin: 10px; 
             color: #07c0ef; 
         }
-         a:hover {
+        a:hover {
              color:white; 
          }
+
         /* Header Styles */
         .header {
             text-align: center;
@@ -63,7 +64,6 @@
         }
         :root {
             --neon-blue: #00f3ff;
-            --neon-purple: #bc13fe;
             --dark-bg: #0a0a0f;
         }
 
@@ -77,6 +77,9 @@
             
         }
         /* h */
+        p1 {
+            font-family: sans-serif;
+        }
         body {
             background: linear-gradient(45deg, var(--dark-bg) 0%, #1a1a2f 100%);
             color: #fff;
@@ -127,6 +130,7 @@
             position: relative;
             width: 100%;
             margin: 30px 0;
+            padding: 10px;
         }
 
         .input-box input {
@@ -202,7 +206,7 @@
             padding: 20px;
             margin-top: 130px;
         }
-     @media (max-width: 600px){
+     @media (max-width: 768px){
             .cyber-container{
                 margin: 10px;
                 width: auto;
@@ -210,21 +214,31 @@
                 padding: 30px;
                 border-radius: 0px;
                 border: 1px solid #07c0ef;
-                box-shadow: 0 0 7px #07c0ef;
             }
-            p {
-                margin-top: 30px;
-                padding: 20px;
+            h1 {
+                font-size: 2.5rem;
             }
-            
-            
             footer {
                 margin-top: 200px;
             }
              #particles {
                 display: none;
             }
+            @media (max-width: 320px){
+                .cyber-container{
+                margin: 7px;
+                width: auto;
+                margin-top: 100px;
+                padding: 10px;
+                border-radius: 0px;
+                border: 1px solid #07c0ef;
+            }
+                h1 {
+                    font-size: 2rem;
+                }
+            }
         }
+
 
     </style>
 </head>
@@ -238,7 +252,7 @@
     <div class="container">    
         <header class="header">
             <h1>Kundan Rana</h1>
-            <p>Data Science and Programing |Artificial Intelligence |Machine Learning |Student at IIT Madras |Aspiring Innovator</p>
+            <p1>Data Science and Programing |Artificial Intelligence |Machine Learning |Student at IIT Madras |Aspiring Innovator</p1><br>
             <a onclick="get()">Get_id&key</a>
         </header>
         <div class="particles" id="particles"></div>
